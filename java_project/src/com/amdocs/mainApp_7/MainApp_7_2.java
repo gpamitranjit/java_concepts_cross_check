@@ -1,5 +1,9 @@
 package com.amdocs.mainApp_7;
 
+/**
+ * @author Amit
+ *
+ */
 public class MainApp_7_2 implements FirstInterface, SecondInterface {
 
 //	When a class implements one interface which contains default method and another interface with abstract method,

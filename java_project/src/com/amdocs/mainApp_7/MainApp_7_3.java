@@ -1,5 +1,9 @@
 package com.amdocs.mainApp_7;
 
+/**
+ * @author Amit
+ *
+ */
 public class MainApp_7_3 implements FirstInterface, ThirdInterface {
 
 	public static void main(String[] args) {
