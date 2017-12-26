@@ -21,12 +21,14 @@ public class MainApp_8_1 {
 		countryMap.put("JAPAN", "TOKYO");
 		countryMap.put("CANADA", "OTTAWA");
 		
-		System.out.println("================================================");
-		System.out.println("Using old style of iterating over the Map collection data.");
 		
+		IterateInOldStyle(countryMap);
+		IterateMapUsingForeachMethod(countryMap);
 	}
 	
 	public static void IterateInOldStyle(Map<String , String> countryMap) {
+		System.out.println("================================================");
+		System.out.println("Using old style of iterating over the Map collection data.");
 		for(Entry<String, String> entry : countryMap.entrySet()) {
 			System.out.println("Entry key: "+ entry.getKey() + ", Entry value: " + entry.getValue());
 		}
