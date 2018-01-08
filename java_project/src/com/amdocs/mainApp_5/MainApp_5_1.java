@@ -11,11 +11,17 @@ import java.util.List;
  */
 public class MainApp_5_1 {
 
-//	java 8 Lambada Exressions are the way to pass functionality to the called method
-//	and we just tell the called method to make use of this funcationality to complete the processing on the passed data.
-	
-	
-	public static void main(String[] args) {
+/*
+	java 8 Lambada Exressions are the way to pass functionality to the called method
+	and we just tell the called method to make use of this functionality to complete the processing on the passed data.
+
+ * below are the Advantages of using Lambada expressions
+ * 1. Reduced Line of code
+ * 2. Sequential and Parallel Execution Support
+ * 3. Passing behavior to methods
+ * 4. High Efficiency with Laziness
+ * 
+*/	public static void main(String[] args) {
 		List<Employee> empList = new ArrayList<>();
 		empList.add(new Employee("Vishal", "DFSDJ89898SDFS", 12));
 		empList.add(new Employee("Amit", "SLFSDFS23423", 2));
