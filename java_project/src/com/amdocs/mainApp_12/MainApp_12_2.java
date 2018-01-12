@@ -78,8 +78,9 @@ public class MainApp_12_2 {
 //		processing the stream parallely			<--- Note: the aggregated data is not sorted when processed parallely!!
 		List<Integer> intList_3 = Arrays.asList(3,7,9,3,1,2,1, 2, 3, 4, 5);
 		intList_3.parallelStream()
-			.sorted()
-			.forEach(intValue -> System.out.print(intValue + ", "));
+			.sequential()			// this method will convert parallel stream into sequential stream
+			.sorted()				// with this method we will apply sorting on the created sequential stream!!,
+			.forEach(intValue -> System.out.print(intValue + ", "));	// so that we get the expected result.
 		
 	}
 
