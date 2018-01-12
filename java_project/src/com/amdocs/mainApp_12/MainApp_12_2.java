@@ -30,6 +30,25 @@ import java.util.stream.Stream;
  *  
  *  We can also convert an unordered stream of data into ordered stream of data by applying sorting intermediate operations
  *  
+ *  
+ *  
+ *  If we are creating stream of data from collections then we don't need to close the collections after processing the stream
+ *  If we are creating stream of data from closable data sources such I/O channels then we can make use of try-with-resources block to get the I/O channel closed automatically otherwise we have to close the I/O  channel explicitly!
+ *  	
+ *  	**Stream API Architecture
+ *  
+ *  		AutoClosable
+ *  			|
+ *  			+---BaseStream
+ *  				|
+ *  				+---IntStream
+ *  				|
+ *  				+---LongStream
+ *  				|
+ *  				+---DoubleStream
+ *  				|
+ *  				+---Steam<T>
+ *  
  * @author amit
  *
  */
