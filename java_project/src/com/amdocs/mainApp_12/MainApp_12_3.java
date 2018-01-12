@@ -103,6 +103,17 @@ public class MainApp_12_3 {
 						.map(squareFunction)
 						.reduce(0, sumBinaryOperator);
 		System.out.println("sum of the stream of elements: " + sum_3);
+		
+/*
+		the use of reduce(identity, BinaryFunction) is same as below traditional code
+		
+		T result = identity;
+		for(T element : this stream) {
+			result = accumulator.apply(result, element);
+		}
+		return result;
+		
+*/
 	}
 
 }
