@@ -45,7 +45,7 @@ public class MainApp_12_11 {
 		}*/
 		
 		String nullableString = "";
-		Optional<String> str_3 = Optional.of(nullableString);
+		Optional<String> str_3 = Optional.ofNullable(nullableString);
 		System.out.println("str_3: " + str_3);
 		System.out.println("isPresent: " + str_3.isPresent());
 		System.out.println("optional.empty: " + str_3.empty());
