@@ -54,7 +54,7 @@ public class MainApp_12_18 {
 		List<Employee> persons_2 = MainApp_12_18.persons();
 		persons_2.stream()
 			.filter(e -> e.getGender().equals(Employee.Gender.MALE) && e.getIncome() >= 5000.0)
-			.map(e -> e.getName())
+			.map(Employee::getName)		// or you can use e -> e.getName() lambada expression
 			.forEach(System.out::println);
 	}
 
