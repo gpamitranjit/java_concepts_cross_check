@@ -36,30 +36,41 @@ public class MainApp_12_18 {
 			.filter(e -> e.getGender().equals(Employee.Gender.FEMALE))
 			.forEach(System.out::println);
 		
+		System.out.println("===============================================");
 		System.out.println("After increasng the income of female employees,");
 		persons.stream()
 			.filter(e -> e.getGender().equals(Employee.Gender.FEMALE))
 			.forEach(e -> e.setIncome(e.getIncome() * 1.10));
 		
+		System.out.println("===============================================");
 		System.out.println("Female employees salary increated by 10%: ");
 		persons.stream()
 			.filter(e -> e.getGender().equals(Employee.Gender.FEMALE))
+			.forEach(System.out::println);
+		
+		
+		System.out.println("===============================================");
+		System.out.println("Just demonstrating the composite filter being applied to list of persons,");
+		List<Employee> persons_2 = MainApp_12_18.persons();
+		persons_2.stream()
+			.filter(e -> e.getGender().equals(Employee.Gender.MALE) && e.getIncome() >= 5000.0)
+			.map(e -> e.getName())
 			.forEach(System.out::println);
 	}
 
 	  public static List<Employee> persons() {
 		    Employee p1 = new Employee(1, "Jake", Gender.MALE, LocalDate.of(1971,
-		        Month.JANUARY, 1), 2343.0);
+		        Month.JANUARY, 1), 2000.0);
 		    Employee p2 = new Employee(2, "Jack", Gender.MALE, LocalDate.of(1972,
-		        Month.JULY, 21), 7100.0);
+		        Month.JULY, 21), 3000.0);
 		    Employee p3 = new Employee(3, "Jane", Gender.FEMALE, LocalDate.of(1973,
-		        Month.MAY, 29), 5455.0);
+		        Month.MAY, 29), 4000.0);
 		    Employee p4 = new Employee(4, "Jode", Gender.MALE, LocalDate.of(1974,
-		        Month.OCTOBER, 16), 1800.0);
+		        Month.OCTOBER, 16), 7000.0);
 		    Employee p5 = new Employee(5, "Jeny", Gender.FEMALE, LocalDate.of(1975,
-		        Month.DECEMBER, 13), 1234.0);
+		        Month.DECEMBER, 13), 8000.0);
 		    Employee p6 = new Employee(6, "Jason", Gender.MALE, LocalDate.of(1976,
-		        Month.JUNE, 9), 3211.0);
+		        Month.JUNE, 9), 6000.0);
 
 		    List<Employee> persons = Arrays.asList(p1, p2, p3, p4, p5, p6);
 
