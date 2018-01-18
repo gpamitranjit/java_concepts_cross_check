@@ -21,6 +21,13 @@ public class MainApp_12_32 {
 								.map(person -> 1L)
 								.count();
 		System.out.println("total persons are: " + totalPersons);
+		
+//		another way of counting the number of elements in the stream of data
+		long totalCount = persons.stream()
+			.map(person -> 1L)
+			.reduce(0L, Long::sum);
+		System.out.println("total person are: " + totalCount);
+		
 	}
 	
 	public static List<Employee> persons() {
