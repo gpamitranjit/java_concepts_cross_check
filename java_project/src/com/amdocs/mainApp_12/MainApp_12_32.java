@@ -28,6 +28,11 @@ public class MainApp_12_32 {
 			.reduce(0L, Long::sum);
 		System.out.println("total person are: " + totalCount);
 		
+		
+//		another way of counting the total elements in the stream
+		long totalCount_3 = persons.parallelStream()
+				.reduce(0L , (partialResult, person)-> partialResult + 1L, Long::sum);
+		System.out.println("total person are: " + totalCount_3);
 	}
 	
 	public static List<Employee> persons() {
