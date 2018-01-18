@@ -1,5 +1,10 @@
 package com.amdocs.generics;
 
+/**
+ * @author amit
+ *
+ * @param <T>
+ */
 public class Box<T> {
 	private T t;
 	
