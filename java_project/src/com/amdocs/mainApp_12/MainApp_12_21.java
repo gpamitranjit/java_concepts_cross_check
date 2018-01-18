@@ -41,6 +41,7 @@ public class MainApp_12_21 {
 			return new Averager();
 		};
 		
+//		in-case of sequential stream the combiner biConsumer will be ignored!		
 		Averager averageCollect = MainApp_12_21.persons()
 				.parallelStream()
 				.filter(person -> person.getGender().equals(Employee.Gender.MALE))
