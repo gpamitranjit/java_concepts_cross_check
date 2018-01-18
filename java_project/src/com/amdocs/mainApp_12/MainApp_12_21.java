@@ -19,11 +19,17 @@ public class MainApp_12_21 {
 
 	public static void main(String[] args) {
 //		reduce to average object!,
+		
+//		this biConsumer will be used only when we operate on the parallel stream,
+//		i.e it will combine the result container from all the independant streams into one result container after the other.
+		
 		BiConsumer<Averager, Averager> biConsumer_1 = (averager1, averager2) -> {
 			averager1.setTotal(averager1.getTotal() + averager2.getTotal());
 			averager1.setCount(averager1.getCount() + averager2.getCount());
 		};
 		
+//		this biConsumer will be used irrespective of the type of produced stream(i.e either sequential or parallel stream.)
+//		it will add next value into previous result container, in this case result container is first argument.
 		BiConsumer<Averager, Double> biConsumer_2 = (averagerValue, doubleValue) -> {
 			
 			averagerValue.setTotal(averagerValue.getTotal() + doubleValue);
