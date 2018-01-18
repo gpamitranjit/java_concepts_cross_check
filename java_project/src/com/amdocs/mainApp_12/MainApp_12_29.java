@@ -17,20 +17,20 @@ import com.amdocs.mainApp_12.Employee.Gender;
  */
 public class MainApp_12_29 {
 
+	private static double max = 0;
+
 	public static void main(String[] args) {
 		List<Employee> persons = MainApp_12_29.persons();
+		
 		ToDoubleFunction<Employee> toDoubleFunction = (person) -> {
-			double max = 0.0;
-			if(person.getIncome() > max) {
-				max = person.getIncome();
-			} 
-			return max;
+			
+			return person.getIncome();
 		}; 
 		
 		double totalIncome = persons.stream()
 								.mapToDouble(toDoubleFunction)
 								.sum();
-			System.out.println("total incomeo of all employees is: " + totalIncome);
+			System.out.println("total income of all employees is: " + totalIncome);
 	}
 
 	public static List<Employee> persons() {
